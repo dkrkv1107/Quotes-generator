@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Random Quotes Generator</title>
+	<style type="text/css">
+	body{
+		background-color: violet;	}
+		#container{
+			height: 50vh;
+			width: 50vw;
+			align-items: center;
+			border: 2px solid black;
+			text-align: center;
+			margin: auto;
+		}
+		button{
+height: 50px;
+width: 200px;
+background-color: yellow;
+		}
+		#output{
+			text-align: center;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+<div id="container">
+	<button>Click for new Quotes</button>
+	<div id="output">New quotes here</div>
+</div>
+</body>
+<script type="text/javascript">
+	console.log("hello world")
+	var quotes = ["The purpose of our lives is to be happy.", "You only live once, but if you do it right, once is enough.","Many of life’s failures are people who did not realize how close they were to success when they gave up","If you want to live a happy life, tie it to a goal, not to people or things.","Never let the fear of striking out keep you from playing the game","Money and success don’t change people; they merely amplify what is already there","Your time is limited, so don’t waste it living someone else’s life. Don’t be trapped by dogma – which is living with the results of other people’s thinking."];
+	var i=0;
+	document.querySelector("button").addEventListener("click",
+		function(){
+			i = i < quotes.length ? ++i : 0;
+			document.getElementById('output').innerHTML = quotes[i];
+			})
+</script>
+</html>
